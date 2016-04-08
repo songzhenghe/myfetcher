@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="zh-CN">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="zh-CN">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="zh-CN"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>phpquery手册 | PHPer晨星</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://www.cxstars.com/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://www.cxstars.com/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="PHPer晨星 » Feed" href="http://www.cxstars.com/?feed=rss2">
+<link rel="alternate" type="application/rss+xml" title="PHPer晨星 » 评论Feed" href="http://www.cxstars.com/?feed=comments-rss2">
+<link rel="alternate" type="application/rss+xml" title="PHPer晨星 » phpquery手册评论Feed" href="http://www.cxstars.com/?feed=rss2&amp;p=388">
+<link rel="stylesheet" id="twentytwelve-fonts-css" href="phpquery%E6%89%8B%E5%86%8C%20_%20PHPer%E6%99%A8%E6%98%9F_files/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentytwelve-style-css" href="phpquery%E6%89%8B%E5%86%8C%20_%20PHPer%E6%99%A8%E6%98%9F_files/style.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.cxstars.com/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="phpquery%E6%89%8B%E5%86%8C%20_%20PHPer%E6%99%A8%E6%98%9F_files/jquery.js"></script>
+<script type="text/javascript" src="phpquery%E6%89%8B%E5%86%8C%20_%20PHPer%E6%99%A8%E6%98%9F_files/jquery-migrate.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.cxstars.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.cxstars.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="iis7.5解析漏洞" href="http://www.cxstars.com/?p=382">
+<link rel="next" title="linux查看当前目录所有文件夹" href="http://www.cxstars.com/?p=393">
+<meta name="generator" content="WordPress 4.0">
+<link rel="canonical" href="http://www.cxstars.com/?p=388">
+<link rel="shortlink" href="http://www.cxstars.com/?p=388">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #000000;
+		}
+		</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url('http://www.cxstars.com/wp-content/uploads/2014/05/0c262a0edb0023f4edb4a51d8d1b7a45.jpg'); background-repeat: repeat; background-position: top left; background-attachment: fixed; }
+</style>
+</head>
+
+<body class="single single-post postid-388 single-format-standard custom-background custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="http://www.cxstars.com/" title="PHPer晨星" rel="home">PHPer晨星</a></h1>
+			<h2 class="site-description">当天空黑暗到一定程度，星辰就会熠熠生辉。</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">菜单</button>
+			<a class="assistive-text" href="#content" title="跳至内容">跳至内容</a>
+			<div class="nav-menu"><ul><li><a href="http://www.cxstars.com/">首页</a></li><li class="page_item page-item-65"><a href="http://www.cxstars.com/?page_id=65">在线翻译</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-388" class="post-388 post type-post status-publish format-standard hentry category-php-program-life tag-manual tag-php tag-phpquery">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">phpquery手册</h1>
+										<div class="comments-link">
+					<a href="http://www.cxstars.com/?p=388#respond" title="《phpquery手册》上的评论"><span class="leave-reply">发表回复</span></a>				</div><!-- .comments-link -->
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<h2>Basics</h2>
+<h2>Example</h2>
+<pre>phpQuery::newDocumentFileXHTML('my-xhtml.html')-&gt;find('p');
+$ul = pq('ul');</pre>
+<h1><a name="Table_of_Contents"></a>Table of Contents</h1>
+<ul>
+<li><a href="http://code.google.com/p/phpquery/wiki/Basics#Loading_documents">Loading documents</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Basics#pq_function">pq() function</a></li>
+</ul>
+<h2><a name="Loading_documents"></a>Loading documents</h2>
+<ul>
+<li>phpQuery::<strong>newDocument</strong>($html, $contentType = null) 
+Creates new document from markup. If no $contentType, autodetection is 
+made (based on markup). If it fails, text/html in utf-8 is used.</li>
+<li>phpQuery::<strong>newDocumentFile</strong>($file, $contentType = null) Creates new document from file. Works like newDocument()</li>
+<li>phpQuery::<strong>newDocumentHTML</strong>($html, $charset = ‘utf-8′)</li>
+<li>phpQuery::<strong>newDocumentXHTML</strong>($html, $charset = ‘utf-8′)</li>
+<li>phpQuery::<strong>newDocumentXML</strong>($html, $charset = ‘utf-8′)</li>
+<li>phpQuery::<strong>newDocumentPHP</strong>($html, $contentType = null) Read more about it on <a href="http://code.google.com/p/phpquery/wiki/PHPSupport" rel="nofollow">PHPSupport page</a></li>
+<li>phpQuery::<strong>newDocumentFileHTML</strong>($file, $charset = ‘utf-8′)</li>
+<li>phpQuery::<strong>newDocumentFileXHTML</strong>($file, $charset = ‘utf-8′)</li>
+<li>phpQuery::<strong>newDocumentFileXML</strong>($file, $charset = ‘utf-8′)</li>
+<li>phpQuery::<strong>newDocumentFilePHP</strong>($file, $contentType) Read more about it on <a href="http://code.google.com/p/phpquery/wiki/PHPSupport" rel="nofollow">PHPSupport page</a></li>
+</ul>
+<h2><a name="pq_function"></a>pq function</h2>
+<p><strong><tt>pq($param, $context = null);</tt></strong></p>
+<p><strong>pq();</strong> function is equivalent of jQuery’s <strong>$();</strong>. It’s used for 3 type of things:</p>
+<ol>
+<ol>
+<li>Importing markup</li>
+</ol>
+</ol>
+<pre>// Import into selected document:
+// doesn't accept text nodes at beginning of input string
+pq('&lt;div/&gt;')
+// Import into document with ID from $pq-&gt;getDocumentID():
+pq('&lt;div/&gt;', $pq-&gt;getDocumentID())
+// Import into same document as DOMNode belongs to:
+pq('&lt;div/&gt;', DOMNode)
+// Import into document from phpQuery object:
+pq('&lt;div/&gt;', $pq)</pre>
+<ol>
+<ol>
+<li>Running queries</li>
+</ol>
+</ol>
+<pre>// Run query on last selected document:
+pq('div.myClass')
+// Run query on document with ID from $pq-&gt;getDocumentID():
+pq('div.myClass', $pq-&gt;getDocumentID())
+// Run query on same document as DOMNode belongs to and use node(s)as root for query:
+pq('div.myClass', DOMNode)
+// Run query on document from phpQuery object 
+// and use object's stack as root node(s) for query:
+pq('div.myClass', $pq)</pre>
+<ol>
+<ol>
+<li>Wrapping DOMNodes with phpQuery objects</li>
+</ol>
+</ol>
+<pre>foreach(pq('li') as $li)
+&nbsp; // $li is pure DOMNode, change it to phpQuery object
+&nbsp; pq($li);</pre>
+<p>Selectors</p>
+<p>Selectors are the heart of jQuery-like interface. Most of <a href="http://www.w3.org/TR/2005/WD-css3-selectors-20051215/" rel="nofollow">CSS Level 3</a> syntax is implemented (in state same as in jQuery).</p>
+<h2><a name="Example"></a>Example</h2>
+<pre>pq(".class ul &gt; li[rel='foo']:first:has(a)")-&gt;appendTo('.append-target-wrapper div')-&gt;...</pre>
+<h1><a name="Table_of_Contents"></a>Table of Contents</h1>
+<ul>
+<li><a href="http://code.google.com/p/phpquery/wiki/Selectors#Basics">Basics</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Selectors#Hierarchy">Hierarchy</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Selectors#Basic_Filters">Basic Filters</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Selectors#Content_Filters">Content Filters</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Selectors#Visibility_Filters">Visibility Filters</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Selectors#Attribute_Filters">Attribute Filters</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Selectors#Child_Filters">Child Filters</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Selectors#Forms">Forms</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Selectors#Form_Filters">Form Filters</a></li>
+</ul>
+<h2><a name="Basics"></a>Basics</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Selectors/id" rel="nofollow">#id</a></strong> Matches a single element with the given id attribute.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/element" rel="nofollow">element</a></strong> Matches all elements with the given name.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/class" rel="nofollow">.class</a></strong> Matches all elements with the given class.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/all" rel="nofollow">*</a></strong> Matches all elements.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/multiple" rel="nofollow">selector1, selector2, selectorN</a></strong> Matches the combined results of all the specified selectors.</li>
+</ul>
+<h2><a name="Hierarchy"></a>Hierarchy</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Selectors/descendant" rel="nofollow">ancestor descendant</a></strong> Matches all descendant elements specified by “descendant” of elements specified by “ancestor”.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/child" rel="nofollow">parent &gt; child</a></strong> Matches all child elements specified by “child” of elements specified by “parent”.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/next" rel="nofollow">prev + next</a></strong> Matches all next elements specified by “next” that are next to elements specified by “prev”.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/siblings" rel="nofollow">prev ~ siblings</a></strong> Matches all sibling elements after the “prev” element that match the filtering “siblings” selector.</li>
+</ul>
+<h2><a name="Basic_Filters"></a>Basic Filters</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Selectors/first" rel="nofollow">:first</a></strong> Matches the first selected element.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/last" rel="nofollow">:last</a></strong> Matches the last selected element.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/not" rel="nofollow">:not(selector)</a></strong> Filters out all elements matching the given selector.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/even" rel="nofollow">:even</a></strong> Matches even elements, zero-indexed.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/odd" rel="nofollow">:odd</a></strong> Matches odd elements, zero-indexed.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/eq" rel="nofollow">:eq(index)</a></strong> Matches a single element by its index.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/gt" rel="nofollow">:gt(index)</a></strong> Matches all elements with an index above the given one.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/lt" rel="nofollow">:lt(index)</a></strong> Matches all elements with an index below the given one.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/header" rel="nofollow">:header</a></strong> Matches all elements that are headers, like h1, h2, h3 and so on.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/animated" rel="nofollow">:animated</a></strong> Matches all elements that are currently being animated.</li>
+</ul>
+<h2><a name="Content_Filters"></a>Content Filters</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Selectors/contains" rel="nofollow">:contains(text)</a></strong> Matches elements which contain the given text.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/empty" rel="nofollow">:empty</a></strong> Matches all elements that have no children (including text nodes).</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/has" rel="nofollow">:has(selector)</a></strong> Matches elements which contain at least one element that matches the specified selector.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/parent" rel="nofollow">:parent</a></strong> Matches all elements that are parents – they have child elements, including text.</li>
+</ul>
+<h2><a name="Visibility_Filters"></a>Visibility Filters</h2>
+<p><i>none</i></p>
+<h2><a name="Attribute_Filters"></a>Attribute Filters</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Selectors/attributeHas" rel="nofollow">[attribute</a>]</strong> Matches elements that have the specified attribute.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/attributeEquals" rel="nofollow">[attribute=value</a>]</strong> Matches elements that have the specified attribute with a certain value.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/attributeNotEqual" rel="nofollow">[attribute!=value</a>]</strong> Matches elements that don’t have the specified attribute with a certain value.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/attributeStartsWith" rel="nofollow">[attribute^=value</a>]</strong> Matches elements that have the specified attribute and it starts with a certain value.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/attributeEndsWith" rel="nofollow">[attribute$=value</a>]</strong> Matches elements that have the specified attribute and it ends with a certain value.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/attributeContains" rel="nofollow">[attribute*=value</a>]</strong> Matches elements that have the specified attribute and it contains a certain value.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/attributeMultiple" rel="nofollow">[selector1</a>selector2selectorN]</strong> Matches elements that have the specified attribute and it contains a certain value.</li>
+</ul>
+<h2><a name="Child_Filters"></a>Child Filters</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Selectors/nthChild" rel="nofollow">:nth-child(index/even/odd/equation)</a></strong> Matches all elements that are the nth-child of their parent or that are the parent’s even or odd children.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/firstChild" rel="nofollow">:first-child</a></strong> Matches all elements that are the first child of their parent.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/lastChild" rel="nofollow">:last-child</a></strong> Matches all elements that are the last child of their parent.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/onlyChild" rel="nofollow">:only-child</a></strong> Matches all elements that are the only child of their parent.</li>
+</ul>
+<h2><a name="Forms"></a>Forms</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Selectors/input" rel="nofollow">:input</a></strong> Matches all input, textarea, select and button elements.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/text" rel="nofollow">:text</a></strong> Matches all input elements of type text.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/password" rel="nofollow">:password</a></strong> Matches all input elements of type password.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/radio" rel="nofollow">:radio</a></strong> Matches all input elements of type radio.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/checkbox" rel="nofollow">:checkbox</a></strong> Matches all input elements of type checkbox.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/submit" rel="nofollow">:submit</a></strong> Matches all input elements of type submit.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/image" rel="nofollow">:image</a></strong> Matches all input elements of type image.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/reset" rel="nofollow">:reset</a></strong> Matches all input elements of type reset.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/button" rel="nofollow">:button</a></strong> Matches all button elements and input elements of type button.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/file" rel="nofollow">:file</a></strong> Matches all input elements of type file.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/hidden" rel="nofollow">:hidden</a></strong> Matches all elements that are hidden, or input elements of type “hidden”.</li>
+</ul>
+<h2><a name="Form_Filters"></a>Form Filters</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Selectors/enabled" rel="nofollow">:enabled</a></strong> Matches all elements that are enabled.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/disabled" rel="nofollow">:disabled</a></strong> Matches all elements that are disabled.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/checked" rel="nofollow">:checked</a></strong> Matches all elements that are checked.</li>
+<li><strong><a href="http://docs.jquery.com/Selectors/selected" rel="nofollow">:selected</a></strong> Matches all elements that are selected.</li>
+</ul>
+<p>Attributes</p>
+<h2>Example</h2>
+<pre>pq('a')-&gt;attr('href', 'newVal')-&gt;removeClass('className')-&gt;html('newHtml')-&gt;...</pre>
+<h1><a name="Table_of_Contents"></a>Table of Contents</h1>
+<ul>
+<li><a href="http://code.google.com/p/phpquery/wiki/Attributes#Attr">Attr</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Attributes#Class">Class</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Attributes#HTML">HTML</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Attributes#Text">Text</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Attributes#Value">Value</a></li>
+</ul>
+<h2><a name="Attr"></a>Attr</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Attributes/attr" rel="nofollow">attr</a></strong><a href="http://docs.jquery.com/Attributes/attr" rel="nofollow">($name)</a>
+ Access a property on the first matched element. This method makes it 
+easy to retrieve a property value from the first matched element. If the
+ element does not have an attribute with such a name, undefined is 
+returned.</li>
+<li><strong><a href="http://docs.jquery.com/Attributes/attr" rel="nofollow">attr</a></strong><a href="http://docs.jquery.com/Attributes/attr" rel="nofollow">($properties)</a> Set a key/value object as properties to all matched elements.</li>
+<li><strong><a href="http://docs.jquery.com/Attributes/attr" rel="nofollow">attr</a></strong><a href="http://docs.jquery.com/Attributes/attr" rel="nofollow">($key, $value)</a> Set a single property to a value, on all matched elements.</li>
+<li><strong><a href="http://docs.jquery.com/Attributes/attr" rel="nofollow">attr</a></strong><a href="http://docs.jquery.com/Attributes/attr" rel="nofollow">($key, $fn)</a> Set a single property to a computed value, on all matched elements.</li>
+<li><strong><a href="http://docs.jquery.com/Attributes/removeAttr" rel="nofollow">removeAttr</a></strong><a href="http://docs.jquery.com/Attributes/removeAttr" rel="nofollow">($name)</a> Remove an attribute from each of the matched elements.</li>
+</ul>
+<h2><a name="Class"></a>Class</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Attributes/addClass" rel="nofollow">addClass</a></strong><a href="http://docs.jquery.com/Attributes/addClass" rel="nofollow">($class)</a> Adds the specified class(es) to each of the set of matched elements.</li>
+<li><strong><a href="http://docs.jquery.com/Attributes/hasClass" rel="nofollow">hasClass</a></strong><a href="http://docs.jquery.com/Attributes/hasClass" rel="nofollow">($class)</a> Returns true if the specified class is present on at least one of the set of matched elements.</li>
+<li><strong><a href="http://docs.jquery.com/Attributes/removeClass" rel="nofollow">removeClass</a></strong><a href="http://docs.jquery.com/Attributes/removeClass" rel="nofollow">($class)</a> Removes all or the specified class(es) from the set of matched elements.</li>
+<li><strong><a href="http://docs.jquery.com/Attributes/toggleClass" rel="nofollow">toggleClass</a></strong><a href="http://docs.jquery.com/Attributes/toggleClass" rel="nofollow">($class)</a> Adds the specified class if it is not present, removes the specified class if it is present.</li>
+</ul>
+<h2><a name="HTML"></a>HTML</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Attributes/html" rel="nofollow">html</a></strong><a href="http://docs.jquery.com/Attributes/html" rel="nofollow">()</a>
+ Get the html contents (innerHTML) of the first matched element. This 
+property is not available on XML documents (although it will work for 
+XHTML documents).</li>
+<li><strong><a href="http://docs.jquery.com/Attributes/html" rel="nofollow">html</a></strong><a href="http://docs.jquery.com/Attributes/html" rel="nofollow">($val)</a>
+ Set the html contents of every matched element. This property is not 
+available on XML documents (although it will work for XHTML documents).</li>
+</ul>
+<h2><a name="Text"></a>Text</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Attributes/text" rel="nofollow">text</a></strong><a href="http://docs.jquery.com/Attributes/text" rel="nofollow">()</a> Get the combined text contents of all matched elements.</li>
+<li><strong><a href="http://docs.jquery.com/Attributes/text" rel="nofollow">text</a></strong><a href="http://docs.jquery.com/Attributes/text" rel="nofollow">($val)</a> Set the text contents of all matched elements.</li>
+</ul>
+<h2><a name="Value"></a>Value</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Attributes/val" rel="nofollow">val</a></strong><a href="http://docs.jquery.com/Attributes/val" rel="nofollow">()</a> Get the content of the value attribute of the first matched element.</li>
+<li><strong><a href="http://docs.jquery.com/Attributes/val" rel="nofollow">val</a></strong><a href="http://docs.jquery.com/Attributes/val" rel="nofollow">($val)</a> Set the value attribute of every matched element.</li>
+<li><strong><a href="http://docs.jquery.com/Attributes/val" rel="nofollow">val</a></strong><a href="http://docs.jquery.com/Attributes/val" rel="nofollow">($val)</a> Checks, or selects, all the radio buttons, checkboxes, and select options that match the set of values.</li>
+</ul>
+<p>Manipulation</p>
+<h2>Example</h2>
+<pre>pq('div.old')-&gt;replaceWith( pq('div.new')-&gt;clone() )-&gt;appendTo('.trash')-&gt;prepend('Deleted')-&gt;...</pre>
+<h1><a name="Table_of_Contents"></a>Table of Contents</h1>
+<ul>
+<li><a href="http://code.google.com/p/phpquery/wiki/Manipulation#Changing_Contents">Changing Contents</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Manipulation#Inserting_Inside">Inserting Inside</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Manipulation#Inserting_Outside">Inserting Outside</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Manipulation#Inserting_Around">Inserting Around</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Manipulation#Replacing">Replacing</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Manipulation#Removing">Removing</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Manipulation#Copying">Copying</a></li>
+</ul>
+<h2><a name="Changing_Contents"></a>Changing Contents</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Manipulation/html" rel="nofollow">html</a></strong><a href="http://docs.jquery.com/Manipulation/html" rel="nofollow">()</a>
+ Get the html contents (innerHTML) of the first matched element. This 
+property is not available on XML documents (although it will work for 
+XHTML documents).</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/html" rel="nofollow">html</a></strong><a href="http://docs.jquery.com/Manipulation/html" rel="nofollow">($val)</a>
+ Set the html contents of every matched element. This property is not 
+available on XML documents (although it will work for XHTML documents).</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/text" rel="nofollow">text</a></strong><a href="http://docs.jquery.com/Manipulation/text" rel="nofollow">()</a> Get the combined text contents of all matched elements.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/text" rel="nofollow">text</a></strong><a href="http://docs.jquery.com/Manipulation/text" rel="nofollow">($val)</a> Set the text contents of all matched elements.</li>
+</ul>
+<h2><a name="Inserting_Inside"></a>Inserting Inside</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Manipulation/append" rel="nofollow">append</a></strong><a href="http://docs.jquery.com/Manipulation/append" rel="nofollow">($content)</a> Append content to the inside of every matched element.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/appendTo" rel="nofollow">appendTo</a></strong><a href="http://docs.jquery.com/Manipulation/appendTo" rel="nofollow">($content)</a> Append all of the matched elements to another, specified, set of elements.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/prepend" rel="nofollow">prepend</a></strong><a href="http://docs.jquery.com/Manipulation/prepend" rel="nofollow">($content)</a> Prepend content to the inside of every matched element.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/prependTo" rel="nofollow">prependTo</a></strong><a href="http://docs.jquery.com/Manipulation/prependTo" rel="nofollow">($content)</a> Prepend all of the matched elements to another, specified, set of elements.</li>
+</ul>
+<h2><a name="Inserting_Outside"></a>Inserting Outside</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Manipulation/after" rel="nofollow">after</a></strong><a href="http://docs.jquery.com/Manipulation/after" rel="nofollow">($content)</a> Insert content after each of the matched elements.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/before" rel="nofollow">before</a></strong><a href="http://docs.jquery.com/Manipulation/before" rel="nofollow">($content)</a> Insert content before each of the matched elements.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/insertAfter" rel="nofollow">insertAfter</a></strong><a href="http://docs.jquery.com/Manipulation/insertAfter" rel="nofollow">($content)</a> Insert all of the matched elements after another, specified, set of elements.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/insertBefore" rel="nofollow">insertBefore</a></strong><a href="http://docs.jquery.com/Manipulation/insertBefore" rel="nofollow">($content)</a> Insert all of the matched elements before another, specified, set of elements.</li>
+</ul>
+<h2><a name="Inserting_Around"></a>Inserting Around</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Manipulation/wrap" rel="nofollow">wrap</a></strong><a href="http://docs.jquery.com/Manipulation/wrap" rel="nofollow">($html)</a> Wrap each matched element with the specified HTML content.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/wrap" rel="nofollow">wrap</a></strong><a href="http://docs.jquery.com/Manipulation/wrap" rel="nofollow">($elem)</a> Wrap each matched element with the specified element.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/wrapAll" rel="nofollow">wrapAll</a></strong><a href="http://docs.jquery.com/Manipulation/wrapAll" rel="nofollow">($html)</a> Wrap all the elements in the matched set into a single wrapper element.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/wrapAll" rel="nofollow">wrapAll</a></strong><a href="http://docs.jquery.com/Manipulation/wrapAll" rel="nofollow">($elem)</a> Wrap all the elements in the matched set into a single wrapper element.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/wrapInner" rel="nofollow">wrapInner</a></strong><a href="http://docs.jquery.com/Manipulation/wrapInner" rel="nofollow">($html)</a> Wrap the inner child contents of each matched element (including text nodes) with an HTML structure.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/wrapInner" rel="nofollow">wrapInner</a></strong><a href="http://docs.jquery.com/Manipulation/wrapInner" rel="nofollow">($elem)</a> Wrap the inner child contents of each matched element (including text nodes) with a DOM element.</li>
+</ul>
+<h2><a name="Replacing"></a>Replacing</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Manipulation/replaceWith" rel="nofollow">replaceWith</a></strong><a href="http://docs.jquery.com/Manipulation/replaceWith" rel="nofollow">($content)</a> Replaces all matched elements with the specified HTML or DOM elements.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/replaceAll" rel="nofollow">replaceAll</a></strong><a href="http://docs.jquery.com/Manipulation/replaceAll" rel="nofollow">($selector)</a> Replaces the elements matched by the specified selector with the matched elements.</li>
+</ul>
+<h2><a name="Removing"></a>Removing</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Manipulation/empty" rel="nofollow">empty</a></strong><a href="http://docs.jquery.com/Manipulation/empty" rel="nofollow">()</a> Remove all child nodes from the set of matched elements.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/remove" rel="nofollow">remove</a></strong><a href="http://docs.jquery.com/Manipulation/remove" rel="nofollow">($expr)</a> Removes all matched elements from the DOM.</li>
+</ul>
+<h2><a name="Copying"></a>Copying</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Manipulation/clone" rel="nofollow">clone</a></strong><a href="http://docs.jquery.com/Manipulation/clone" rel="nofollow">()</a> Clone matched DOM Elements and select the clones.</li>
+<li><strong><a href="http://docs.jquery.com/Manipulation/clone" rel="nofollow">clone</a></strong><a href="http://docs.jquery.com/Manipulation/clone" rel="nofollow">($true)</a> Clone matched DOM Elements, and all their event handlers, and select the clones.</li>
+</ul>
+<p>Ajax</p>
+<h2>Example</h2>
+<pre>pq('#element')-&gt;load('http://somesite.com/page .inline-selector')-&gt;...</pre>
+<h1><a name="Table_of_Contents"></a>Table of Contents</h1>
+<ul>
+<li><a href="http://code.google.com/p/phpquery/wiki/Ajax#Server_Side_Ajax">Server Side Ajax</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Ajax#Cross_Domain_Ajax">Cross Domain Ajax</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Ajax#Ajax_Requests">Ajax Requests</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Ajax#Ajax_Events">Ajax Events</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Ajax#Misc">Misc</a></li>
+</ul>
+<h2><a name="Server_Side_Ajax"></a>Server Side Ajax</h2>
+<p>Ajax, standing for <i>Asynchronous JavaScript and XML</i> is combination of HTTP Client and XML parser which doesn’t lock program’s thread (doing request in asynchronous way).</p>
+<p><strong>phpQuery</strong> also offers such functionality, making use of solid quality <a href="http://framework.zend.com/manual/en/zend.http.html" rel="nofollow">Zend_Http_Client</a>. Unfortunately requests aren’t asynchronous, but nothing is impossible. For today, instead of <a href="http://en.wikipedia.org/wiki/XMLHttpRequest" rel="nofollow">XMLHttpRequest</a> you always get Zend_Http_Client instance. API unification is <a href="http://code.google.com/p/phpquery/issues/detail?id=44" rel="nofollow">planned</a>.</p>
+<h2><a name="Cross_Domain_Ajax"></a>Cross Domain Ajax</h2>
+<p>For security reasons, by default <strong>phpQuery</strong> doesn’t allow connections to hosts other than actual <tt>$_SERVER['HTTP_HOST']</tt>. Developer needs to grant rights to other hosts before making an <a href="http://code.google.com/p/phpquery/wiki/Ajax" rel="nofollow">Ajax</a> request.</p>
+<p>There are 2 methods for allowing other hosts</p>
+<ul>
+<li>phpQuery::<strong>ajaxAllowURL</strong>($url)</li>
+<li>phpQuery::<strong>ajaxAllowHost</strong>($host)</li>
+</ul>
+<pre>// connect to google.com
+phpQuery::ajaxAllowHost('google.com');
+phpQuery::get('http://google.com/ig');
+// or using same string
+$url = 'http://google.com/ig';
+phpQuery::ajaxAllowURL($url);
+phpQuery::get($url);</pre>
+<h2><a name="Ajax_Requests"></a>Ajax Requests</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Ajax/jQuery.ajax" rel="nofollow">phpQuery::ajax</a></strong><a href="http://docs.jquery.com/Ajax/jQuery.ajax" rel="nofollow">($options)</a> Load a remote page using an HTTP request.</li>
+<li><strong><a href="http://docs.jquery.com/Ajax/load" rel="nofollow">load</a></strong><a href="http://docs.jquery.com/Ajax/load" rel="nofollow">($url, $data, $callback)</a> Load HTML from a remote file and inject it into the DOM.</li>
+<li><strong><a href="http://docs.jquery.com/Ajax/jQuery.get" rel="nofollow">phpQuery::get</a></strong><a href="http://docs.jquery.com/Ajax/jQuery.get" rel="nofollow">($url, $data, $callback)</a> Load a remote page using an HTTP GET request.</li>
+<li><strong><a href="http://docs.jquery.com/Ajax/jQuery.getJSON" rel="nofollow">phpQuery::getJSON</a></strong><a href="http://docs.jquery.com/Ajax/jQuery.getJSON" rel="nofollow">($url, $data, $callback)</a> Load JSON data using an HTTP GET request.</li>
+<li><strong><a href="http://docs.jquery.com/Ajax/jQuery.getScript" rel="nofollow">phpQuery::getScript</a></strong><a href="http://docs.jquery.com/Ajax/jQuery.getScript" rel="nofollow">($url, $callback)</a> Loads, and executes, a local JavaScript file using an HTTP GET request.</li>
+<li><strong><a href="http://docs.jquery.com/Ajax/jQuery.post" rel="nofollow">phpQuery::post</a></strong><a href="http://docs.jquery.com/Ajax/jQuery.post" rel="nofollow">($url, $data, $callback, $type)</a> Load a remote page using an HTTP POST request.</li>
+</ul>
+<h2><a name="Ajax_Events"></a>Ajax Events</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Ajax/ajaxComplete" rel="nofollow">ajaxComplete</a></strong><a href="http://docs.jquery.com/Ajax/ajaxComplete" rel="nofollow">($callback)</a> Attach a function to be executed whenever an AJAX request completes. This is an Ajax Event.</li>
+<li><strong><a href="http://docs.jquery.com/Ajax/ajaxError" rel="nofollow">ajaxError</a></strong><a href="http://docs.jquery.com/Ajax/ajaxError" rel="nofollow">($callback)</a> Attach a function to be executed whenever an AJAX request fails. This is an Ajax Event.</li>
+<li><strong><a href="http://docs.jquery.com/Ajax/ajaxSend" rel="nofollow">ajaxSend</a></strong><a href="http://docs.jquery.com/Ajax/ajaxSend" rel="nofollow">($callback)</a> Attach a function to be executed before an AJAX request is sent. This is an Ajax Event.</li>
+<li><strong><a href="http://docs.jquery.com/Ajax/ajaxStart" rel="nofollow">ajaxStart</a></strong><a href="http://docs.jquery.com/Ajax/ajaxStart" rel="nofollow">($callback)</a> Attach a function to be executed whenever an AJAX request begins and there is none already active. This is an Ajax Event.</li>
+<li><strong><a href="http://docs.jquery.com/Ajax/ajaxStop" rel="nofollow">ajaxStop</a></strong><a href="http://docs.jquery.com/Ajax/ajaxStop" rel="nofollow">($callback)</a> Attach a function to be executed whenever all AJAX requests have ended. This is an Ajax Event.</li>
+<li><strong><a href="http://docs.jquery.com/Ajax/ajaxSuccess" rel="nofollow">ajaxSuccess</a></strong><a href="http://docs.jquery.com/Ajax/ajaxSuccess" rel="nofollow">($callback)</a> Attach a function to be executed whenever an AJAX request completes successfully. This is an Ajax Event.</li>
+</ul>
+<h2><a name="Misc"></a>Misc</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Ajax/jQuery.ajaxSetup" rel="nofollow">phpQuery::ajaxSetup</a></strong><a href="http://docs.jquery.com/Ajax/jQuery.ajaxSetup" rel="nofollow">($options)</a> Setup global settings for AJAX requests.</li>
+<li><strong><a href="http://docs.jquery.com/Ajax/serialize" rel="nofollow">serialize</a></strong><a href="http://docs.jquery.com/Ajax/serialize" rel="nofollow">()</a> Serializes a set of input elements into a string of data. This will serialize all given elements.</li>
+<li><strong><a href="http://docs.jquery.com/Ajax/serializeArray" rel="nofollow">serializeArray</a></strong><a href="http://docs.jquery.com/Ajax/serializeArray" rel="nofollow">()</a> Serializes all forms and form elements (like the .serialize() method) but returns a JSON data structure for you to work with.</li>
+</ul>
+<h2><a name="Options"></a>Options</h2>
+<p>Detailed options description in available at <a href="http://docs.jquery.com/Ajax/jQuery.ajax#toptions" rel="nofollow">jQuery Documentation Site</a>.</p>
+<ul>
+<li><strong><tt>async</tt></strong> <tt>Boolean</tt></li>
+<li><strong><tt>beforeSend</tt></strong> <tt>Function</tt></li>
+<li><strong><tt>cache</tt></strong> <tt>Boolean</tt></li>
+<li><strong><tt>complete</tt></strong> <tt>Function</tt></li>
+<li><strong><tt>contentType</tt></strong> <tt>String</tt></li>
+<li><strong><tt>data</tt></strong> <tt>Object, String</tt></li>
+<li><strong><tt>dataType</tt></strong> <tt>String</tt></li>
+<li><strong><tt>error</tt></strong> <tt>Function</tt></li>
+<li><strong><tt>global</tt></strong> <tt>Boolean</tt></li>
+<li><strong><tt>ifModified</tt></strong> <tt>Boolean</tt></li>
+<li><strong><tt>jsonp</tt></strong> <tt>String</tt></li>
+<li><strong><tt>password</tt></strong> <tt>String</tt></li>
+<li><strong><tt>processData</tt></strong> <tt>Boolean</tt></li>
+<li><strong><tt>success</tt></strong> <tt>Function</tt></li>
+<li><strong><tt>timeout</tt></strong> <tt>Number</tt></li>
+<li><strong><tt>type</tt></strong> <tt>String</tt></li>
+<li><strong><tt>url</tt></strong> <tt>String</tt></li>
+<li><strong><tt>username</tt></strong> <tt>String</tt></li>
+</ul>
+<p>Events</p>
+<h1>Table of Contents</h1>
+<ul>
+<li><a href="http://code.google.com/p/phpquery/wiki/Events#Example">Example</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Events#Server_Side_Events">Server Side Events</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Events#Page_Load">Page Load</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Events#Event_Handling">Event Handling</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Events#Interaction_Helpers">Interaction Helpers</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Events#Event_Helpers">Event Helpers</a></li>
+</ul>
+<h2><a name="Example"></a>Example</h2>
+<pre>pq('form')-&gt;bind('submit', 'submitHandler')-&gt;trigger('submit')-&gt;...
+function submitHandler($e) {
+&nbsp; print 'Target: '.$e-&gt;target-&gt;tagName;
+&nbsp; print 'Bubbling ? '.$e-&gt;currentTarget-&gt;tagName;
+}</pre>
+<h2><a name="Server_Side_Events"></a>Server Side Events</h2>
+<p>phpQuery support <strong>server-side</strong> events, same as jQuery handle client-side ones. On server there isn’t, of course, events such as <i>mouseover</i> (but they can be triggered).</p>
+<p>By default, phpQuery automatically fires up only <strong>change</strong> event for form elements. If you load <a href="http://code.google.com/p/phpquery/wiki/WebBrowser">WebBrowser</a> plugin, <strong>submit</strong> and <strong>click</strong> will be handled properly – eg submitting form with inputs’ data to action URL via new <a href="http://code.google.com/p/phpquery/wiki/Ajax" rel="nofollow">Ajax</a> request.</p>
+<p>$this (<tt>this</tt> in JS) context for handler scope <strong>isn’t available</strong>. You have to use one of following manually:</p>
+<ul>
+<li>$event-&gt;<strong>target</strong></li>
+<li>$event-&gt;<strong>currentTarget</strong></li>
+<li>$event-&gt;<strong>relatedTarget</strong></li>
+</ul>
+<h2><a name="Page_Load"></a>Page Load</h2>
+<p><i>none</i></p>
+<h2><a name="Event_Handling"></a>Event Handling</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Events/bind" rel="nofollow">bind</a></strong><a href="http://docs.jquery.com/Events/bind" rel="nofollow">($type, $data, $fn)</a> Binds a handler to one or more events (like click) for each matched element. Can also bind custom events.</li>
+<li><strong><a href="http://docs.jquery.com/Events/one" rel="nofollow">one</a></strong><a href="http://docs.jquery.com/Events/one" rel="nofollow">($type, $data, $fn)</a> Binds a handler to one or more events to be executed once for each matched element.</li>
+<li><strong><a href="http://docs.jquery.com/Events/trigger" rel="nofollow">trigger</a></strong><a href="http://docs.jquery.com/Events/trigger" rel="nofollow">($type , $data )</a> Trigger a type of event on every matched element.</li>
+<li><strong><a href="http://docs.jquery.com/Events/triggerHandler" rel="nofollow">triggerHandler</a></strong><a href="http://docs.jquery.com/Events/triggerHandler" rel="nofollow">($type , $data )</a>
+ This particular method triggers all bound event handlers on an element 
+(for a specific event type) WITHOUT executing the browsers default 
+actions.</li>
+<li><strong><a href="http://docs.jquery.com/Events/unbind" rel="nofollow">unbind</a></strong><a href="http://docs.jquery.com/Events/unbind" rel="nofollow">($type , $data )</a> This does the opposite of bind, it removes bound events from each of the matched elements.</li>
+</ul>
+<h2><a name="Interaction_Helpers"></a>Interaction Helpers</h2>
+<p><i>none</i></p>
+<h2><a name="Event_Helpers"></a>Event Helpers</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Events/change" rel="nofollow">change</a></strong><a href="http://docs.jquery.com/Events/change" rel="nofollow">()</a> Triggers the change event of each matched element.</li>
+<li><strong><a href="http://docs.jquery.com/Events/change" rel="nofollow">change</a></strong><a href="http://docs.jquery.com/Events/change" rel="nofollow">($fn)</a> Binds a function to the change event of each matched element.</li>
+<li><strong><a href="http://docs.jquery.com/Events/submit" rel="nofollow">submit</a></strong><a href="http://docs.jquery.com/Events/submit" rel="nofollow">()</a> Trigger the submit event of each matched element.</li>
+<li><strong><a href="http://docs.jquery.com/Events/submit" rel="nofollow">submit</a></strong><a href="http://docs.jquery.com/Events/submit" rel="nofollow">($fn)</a> Bind a function to the submit event of each matched element.</li>
+</ul>
+<p>Utilities</p>
+<h1>Table of Contents</h1>
+<ul>
+<li><a href="http://code.google.com/p/phpquery/wiki/Utilities#User_Agent">User Agent</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Utilities#Array_and_Object_operations">Array and Object operations</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Utilities#Test_operations">Test operations</a></li>
+<li><a href="http://code.google.com/p/phpquery/wiki/Utilities#String_operations">String operations</a></li>
+</ul>
+<h2><a name="User_Agent"></a>User Agent</h2>
+<p><i>none</i></p>
+<h2><a name="Array_and_Object_operations"></a>Array and Object operations</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Utilities/jQuery.each" rel="nofollow">phpQuery::each</a></strong><a href="http://docs.jquery.com/Utilities/jQuery.each" rel="nofollow">($object, $callback)</a> A generic iterator function, which can be used to seamlessly iterate over both objects and arrays.</li>
+<li><strong><a href="http://docs.jquery.com/Utilities/jQuery.grep" rel="nofollow">phpQuery::grep</a></strong><a href="http://docs.jquery.com/Utilities/jQuery.grep" rel="nofollow">($array, $callback, $invert)</a> Filter items out of an array, by using a filter function.</li>
+<li><strong><a href="http://docs.jquery.com/Utilities/jQuery.makeArray" rel="nofollow">phpQuery::makeArray</a></strong><a href="http://docs.jquery.com/Utilities/jQuery.makeArray" rel="nofollow">($obj)</a> Turns an array-like object into a true array.</li>
+<li><strong><a href="http://docs.jquery.com/Utilities/jQuery.map" rel="nofollow">phpQuery::map</a></strong><a href="http://docs.jquery.com/Utilities/jQuery.map" rel="nofollow">($array, $callback)</a> Translate all items in an array to another array of items.</li>
+<li><strong><a href="http://docs.jquery.com/Utilities/jQuery.inArray" rel="nofollow">phpQuery::inArray</a></strong><a href="http://docs.jquery.com/Utilities/jQuery.inArray" rel="nofollow">($value, $array)</a> Determine the index of the first parameter in the Array (-1 if not found).</li>
+<li><strong><a href="http://docs.jquery.com/Utilities/jQuery.unique" rel="nofollow">phpQuery::unique</a></strong><a href="http://docs.jquery.com/Utilities/jQuery.unique" rel="nofollow">($array)</a> Remove all duplicate elements from an array of elements.</li>
+</ul>
+<h2><a name="Test_operations"></a>Test operations</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Utilities/jQuery.isFunction" rel="nofollow">phpQuery::isFunction</a></strong><a href="http://docs.jquery.com/Utilities/jQuery.isFunction" rel="nofollow">($obj)</a> Determine if the parameter passed is a function.</li>
+</ul>
+<h2><a name="String_operations"></a>String operations</h2>
+<ul>
+<li><strong><a href="http://docs.jquery.com/Utilities/jQuery.trim" rel="nofollow">phpQuery::trim</a></strong><a href="http://docs.jquery.com/Utilities/jQuery.trim" rel="nofollow">($str)</a> Remove the whitespace from the beginning and end of a string.</li>
+</ul>
+<p>PluginsClientSidePorts</p>
+<h2>JSON</h2>
+<p>Port of <a href="http://jollytoad.googlepages.com/json.js" rel="nofollow">JSON</a> plugin.</p>
+<pre>$jsonString = phpQuery::toJSON( pq('form')-&gt;serializeArray() );
+$array = phpQuery::parseJSON('{"foo": "bar"}');</pre>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			本条目发布于<a href="http://www.cxstars.com/?p=388" title="下午 11:58" rel="bookmark"><time class="entry-date" datetime="2013-07-22T23:58:11+00:00">2013 年 7 月 22 日</time></a>。属于<a href="http://www.cxstars.com/?cat=9" rel="category">PHP</a>分类，被贴了 <a href="http://www.cxstars.com/?tag=manual" rel="tag">manual</a>、<a href="http://www.cxstars.com/?tag=php" rel="tag">php</a>、<a href="http://www.cxstars.com/?tag=phpquery" rel="tag">phpQuery</a> 标签。<span class="by-author">作者是<span class="author vcard"><a class="url fn n" href="http://www.cxstars.com/?author=1" title="查看所有由chenxin发布的文章" rel="author">chenxin</a></span>。</span>								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">文章导航</h3>
+					<span class="nav-previous"><a href="http://www.cxstars.com/?p=382" rel="prev"><span class="meta-nav">←</span> iis7.5解析漏洞</a></span>
+					<span class="nav-next"><a href="http://www.cxstars.com/?p=393" rel="next">linux查看当前目录所有文件夹 <span class="meta-nav">→</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">发表评论 <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.cxstars.com/?p=388#respond" style="display:none;">取消回复</a></small></h3>
+									<form action="http://www.cxstars.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">电子邮件地址不会被公开。 必填项已用<span class="required">*</span>标注</p>							<p class="comment-form-author"><label for="author">姓名 <span class="required">*</span></label> <input id="author" name="author" size="30" aria-required="true" type="text"></p>
+<p class="comment-form-email"><label for="email">电子邮件 <span class="required">*</span></label> <input id="email" name="email" size="30" aria-required="true" type="text"></p>
+<p class="comment-form-url"><label for="url">站点</label> <input id="url" name="url" size="30" type="text"></p>
+												<p class="comment-form-comment"><label for="comment">评论</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">您可以使用这些<abbr title="HyperText Markup Language">HTML</abbr>标签和属性： <code>&lt;a
+ href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; 
+&lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del 
+datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; 
+&lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" id="submit" value="发表评论" type="submit">
+							<input name="comment_post_ID" value="388" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+						</p>
+						<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="0ac20f9426" type="hidden"></p><p style="display: none;"></p>					<input id="ak_js" name="ak_js" value="1428541340909" type="hidden"></form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://www.cxstars.com/">
+				<div>
+					<label class="screen-reader-text" for="s">搜索：</label>
+					<input name="s" id="s" type="text">
+					<input id="searchsubmit" value="搜索" type="submit">
+				</div>
+			</form></aside><aside id="calendar-2" class="widget widget_calendar"><div id="calendar_wrap"><table id="wp-calendar">
+	<caption>2015年四月</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="星期一">一</th>
+		<th scope="col" title="星期二">二</th>
+		<th scope="col" title="星期三">三</th>
+		<th scope="col" title="星期四">四</th>
+		<th scope="col" title="星期五">五</th>
+		<th scope="col" title="星期六">六</th>
+		<th scope="col" title="星期日">日</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://www.cxstars.com/?m=201401">« 一</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+	</tr>
+	<tr>
+		<td>6</td><td>7</td><td>8</td><td id="today">9</td><td>10</td><td>11</td><td>12</td>
+	</tr>
+	<tr>
+		<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+	</tr>
+	<tr>
+		<td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+	</tr>
+	<tr>
+		<td>27</td><td>28</td><td>29</td><td>30</td>
+		<td class="pad" colspan="3">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></aside><aside id="pages-2" class="widget widget_pages"><h3 class="widget-title">页面</h3>		<ul>
+			<li class="page_item page-item-65"><a href="http://www.cxstars.com/?page_id=65">在线翻译</a></li>
+		</ul>
+		</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">近期文章</h3>		<ul>
+					<li>
+				<a href="http://www.cxstars.com/?p=600">2013年年终总结</a>
+						</li>
+					<li>
+				<a href="http://www.cxstars.com/?p=598">Windows上安装OpenSSL和生成证书</a>
+						</li>
+					<li>
+				<a href="http://www.cxstars.com/?p=595">zf多数据库切换默认table abstract</a>
+						</li>
+					<li>
+				<a href="http://www.cxstars.com/?p=593">primecoin错误备忘</a>
+						</li>
+					<li>
+				<a href="http://www.cxstars.com/?p=590">mysql登录非默认3306端口的bug</a>
+						</li>
+				</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">近期评论</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">chenxin</span>发表在《<a href="http://www.cxstars.com/?p=244#comment-1831">CentOS安装Go1.1失败记录：Segmentation fault</a>》</li><li class="recentcomments"><span class="comment-author-link">jimmy</span>发表在《<a href="http://www.cxstars.com/?p=363#comment-1829">mac 环境下sublime text2安装Ctags</a>》</li><li class="recentcomments"><span class="comment-author-link">kid</span>发表在《<a href="http://www.cxstars.com/?p=557#comment-1789">thinkphp之恶心的调试模式</a>》</li><li class="recentcomments"><span class="comment-author-link">chenxin</span>发表在《<a href="http://www.cxstars.com/?p=244#comment-292">CentOS安装Go1.1失败记录：Segmentation fault</a>》</li><li class="recentcomments"><span class="comment-author-link"><a href="http://www.abc.com/" rel="external nofollow" class="url">楚留香</a></span>发表在《<a href="http://www.cxstars.com/?p=244#comment-291">CentOS安装Go1.1失败记录：Segmentation fault</a>》</li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">文章归档</h3>		<ul>
+	<li><a href="http://www.cxstars.com/?m=201401">2014年一月</a></li>
+	<li><a href="http://www.cxstars.com/?m=201312">2013年十二月</a></li>
+	<li><a href="http://www.cxstars.com/?m=201311">2013年十一月</a></li>
+	<li><a href="http://www.cxstars.com/?m=201310">2013年十月</a></li>
+	<li><a href="http://www.cxstars.com/?m=201309">2013年九月</a></li>
+	<li><a href="http://www.cxstars.com/?m=201308">2013年八月</a></li>
+	<li><a href="http://www.cxstars.com/?m=201307">2013年七月</a></li>
+	<li><a href="http://www.cxstars.com/?m=201306">2013年六月</a></li>
+	<li><a href="http://www.cxstars.com/?m=201305">2013年五月</a></li>
+		</ul>
+</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">分类目录</h3>		<ul>
+	<li class="cat-item cat-item-186"><a href="http://www.cxstars.com/?cat=186">C/C++</a>
+</li>
+	<li class="cat-item cat-item-105"><a href="http://www.cxstars.com/?cat=105">Git</a>
+</li>
+	<li class="cat-item cat-item-67"><a href="http://www.cxstars.com/?cat=67">Go</a>
+</li>
+	<li class="cat-item cat-item-170"><a href="http://www.cxstars.com/?cat=170">Javascript</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://www.cxstars.com/?cat=10" title="MySQL">MySQL</a>
+</li>
+	<li class="cat-item cat-item-181"><a href="http://www.cxstars.com/?cat=181">NoSQL</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.cxstars.com/?cat=9" title="PHP">PHP</a>
+</li>
+	<li class="cat-item cat-item-74"><a href="http://www.cxstars.com/?cat=74">WordPress</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.cxstars.com/?cat=3">操作系统</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://www.cxstars.com/?cat=2" title="程序人生">程序人生</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.cxstars.com/?cat=1">行行摄摄</a>
+</li>
+		</ul>
+</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://cn.wordpress.org/" title="优雅的个人发布平台">自豪地采用WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript" src="phpquery%E6%89%8B%E5%86%8C%20_%20PHPer%E6%99%A8%E6%98%9F_files/form.js"></script>
+<script type="text/javascript" src="phpquery%E6%89%8B%E5%86%8C%20_%20PHPer%E6%99%A8%E6%98%9F_files/comment-reply.js"></script>
+<script type="text/javascript" src="phpquery%E6%89%8B%E5%86%8C%20_%20PHPer%E6%99%A8%E6%98%9F_files/navigation.js"></script>
+
+</body></html>

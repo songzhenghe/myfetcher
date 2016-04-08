@@ -1,0 +1,27 @@
+SELECT word,count(*) FROM `frword` WHERE 1 group by word having count(*)=2;
+
+update frword set word=trim(word);
+update frword set `explain`=replace(`explain`,'赞踩\r更换举报\r\rinitThumbnail()','');
+update frword set `sentence`=replace(`sentence`,'评价该例句：好评差评指正','');
+
+
+update `frword_base` set aleph=upper(substr(word,1,1)) WHERE 1
+
+41条重复
+
+音标空1811
+解释空1224
+例句空1639
+无音频1168
+首字母不认识376
+
+
+insert into spword select id,0,id from spword_base;
+
+update `spword` set letter_id=(select sp_letter.id from sp_letter left join spword_base on md5(upper(spword_base.aleph))=md5(upper(sp_letter.letter)) where spword_base.id=spword.standard_id limit 1)
+
+
+
+
+
+
